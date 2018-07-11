@@ -1,0 +1,26 @@
+<div>
+    {{> _moviePartial movie}}
+    <a href="/movies/edit/{{movie._id}}"> Edit this movie</a>
+</div>
+
+<a href="/movies">Back to Movies</a>
+
+<br>
+<a href="/movie/{{movie._id}}/reviews/new">Add a Review</a>
+<hr>
+<div>
+    <h3>Reviews for {{movie.title}}:</h3>
+    <hr>
+      {{#each movie.reviews}}
+        <h4>{{this.reviewer}}</h4>
+        <p>{{this.content}}</p>
+
+        <form action="/movies/{{../movie._id}}/reviews/delete/{{@index}}" method="post">
+        <button>Delete this Review</button>
+        </form>
+        <form action="/movies/{{../movie._id}}/reviews/edit/{{@index}}" method="get">
+        <button>Update this Review</button>
+        </form>
+        <hr>
+      {{/each}}
+</div>

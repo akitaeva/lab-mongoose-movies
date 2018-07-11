@@ -1,0 +1,14 @@
+<br>
+<form action="/celebrities/edit/{{celeb._id}}" method="get"> 
+    <label for="name-input">Name</label>
+    <input type="text" name="updName" id="name-input" value="{{celeb.name}}">
+
+    <label for="occupation-input">Occupation</label>
+    <input type="text" name="updGenre" id="genre-input" value="{{celeb.occupation}}">
+
+    <label for="catchphrase-input">Plot</label>
+    <input type="text" name="updCatchPhrase" id="catchPhrase-input" value="{{celeb.catchPhrase}}">
+
+    <button type="submit">Save changes</button>
+
+</form>

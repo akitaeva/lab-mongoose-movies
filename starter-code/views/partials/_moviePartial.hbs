@@ -1,0 +1,11 @@
+<div>
+    <h1>{{this.title}}</h1>
+    <h3>Genre: {{this.genre}} </h3>
+    <h3>Plot: {{this.plot}} </h3>
+    <h3>Cast: 
+      {{#each this.cast}}
+        | {{this.name}} |
+      {{/each}}
+    </h3>
+  
+</div>
